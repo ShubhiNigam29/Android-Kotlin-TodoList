@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         todoAdapter = TodoAdapter(mutableListOf())
+
         rvTodoItems.adapter = todoAdapter
         rvTodoItems.layoutManager = LinearLayoutManager(this)
 
@@ -24,7 +25,6 @@ class MainActivity : AppCompatActivity() {
                 etTodoTitle.text.clear()
             }
         }
-
         btnDeleteDoneTodos.setOnClickListener {
             todoAdapter.deleteDoneTodos()
         }
